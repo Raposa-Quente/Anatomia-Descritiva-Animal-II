@@ -3,34 +3,507 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anatomia Descritiva II</title>
+
+    <title>Anatomia Descritiva II | Monitoria</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f1115;
+            color: #f2f2f2;
+            line-height: 1.6;
+        }
+
+        /* ===== CABEÇALHO ===== */
+
+        header {
+            background: #151820;
+            border-bottom: 1px solid #292e38;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #d6b36a;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #d6b36a;
+        }
+
+        /* ===== HERO ===== */
+
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 8%;
+            background:
+                radial-gradient(circle at 80% 30%, #2b2520 0%, transparent 35%),
+                #0f1115;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .tag {
+            color: #d6b36a;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 80px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #d6b36a;
+        }
+
+        .hero p {
+            color: #b8bcc5;
+            font-size: 18px;
+            max-width: 650px;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #d6b36a;
+            color: #101010;
+            padding: 13px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            background: #e3c17d;
+        }
+
+        /* ===== SEÇÕES ===== */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            margin-bottom: 40px;
+        }
+
+        .section-title small {
+            color: #d6b36a;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-top: 8px;
+        }
+
+        .section-title p {
+            color: #999;
+            max-width: 650px;
+            margin-top: 10px;
+        }
+
+        /* ===== CARDS ===== */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: #171a21;
+            border: 1px solid #292e38;
+            border-radius: 12px;
+            padding: 25px;
+            text-decoration: none;
+            color: white;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #d6b36a;
+        }
+
+        .card-icon {
+            font-size: 30px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* ===== DESTAQUE ===== */
+
+        .highlight {
+            background: #171a21;
+            border: 1px solid #292e38;
+            border-radius: 15px;
+            padding: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .highlight-text {
+            max-width: 700px;
+        }
+
+        .highlight h2 {
+            margin-bottom: 10px;
+        }
+
+        .highlight p {
+            color: #aaa;
+        }
+
+        /* ===== RODAPÉ ===== */
+
+        footer {
+            border-top: 1px solid #292e38;
+            padding: 30px 8%;
+            color: #777;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* ===== CELULAR ===== */
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero {
+                min-height: 60vh;
+                padding-top: 60px;
+            }
+
+            .highlight {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Anatomia Descritiva II</h1>
+    <!-- CABEÇALHO -->
 
-    <p>Portal da Monitoria</p>
+    <header>
 
-    <h2>Conteúdos</h2>
+        <div class="logo">
+            Anatomia <span>II</span>
+        </div>
 
-    <ul>
-        <li>Osteologia</li>
-        <li>Artrologia</li>
-        <li>Miologia</li>
-        <li>Esplancnologia</li>
-        <li>Angiologia</li>
-        <li>Neurologia</li>
-    </ul>
+        <nav>
+            <a href="#conteudos">Conteúdos</a>
+            <a href="#ferramentas">Ferramentas</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
 
-    <h2>Ferramentas de estudo</h2>
+    </header>
 
-    <ul>
-        <li>Questões</li>
-        <li>Quiz</li>
-        <li>Atlas Anatômico</li>
-        <li>Flashcards</li>
-    </ul>
+
+    <!-- APRESENTAÇÃO -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="tag">
+                    Portal da Monitoria
+                </div>
+
+                <h1>
+                    Anatomia<br>
+                    <span>Descritiva II</span>
+                </h1>
+
+                <p>
+                    Um espaço para revisar conteúdos, explorar estruturas
+                    anatômicas e testar seus conhecimentos em Anatomia
+                    Veterinária.
+                </p>
+
+                <a href="#conteudos" class="button">
+                    Começar a estudar
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTEÚDOS -->
+
+        <section id="conteudos">
+
+            <div class="section-title">
+
+                <small>Estude por assunto</small>
+
+                <h2>Conteúdos</h2>
+
+                <p>
+                    Acesse os materiais organizados por temas da disciplina.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+                <a href="#" class="card">
+
+                    <div class="card-icon">🦴</div>
+
+                    <h3>Osteologia</h3>
+
+                    <p>
+                        Ossos, acidentes ósseos e identificação das estruturas.
+                    </p>
+
+                </a>
+
+
+                <a href="#" class="card">
+
+                    <div class="card-icon">🦿</div>
+
+                    <h3>Artrologia</h3>
+
+                    <p>
+                        Articulações, classificações e estruturas associadas.
+                    </p>
+
+                </a>
+
+
+                <a href="#" class="card">
+
+                    <div class="card-icon">💪</div>
+
+                    <h3>Miologia</h3>
+
+                    <p>
+                        Músculos, origem, inserção, ação e relações anatômicas.
+                    </p>
+
+                </a>
+
+
+                <a href="#" class="card">
+
+                    <div class="card-icon">🫀</div>
+
+                    <h3>Angiologia</h3>
+
+                    <p>
+                        Artérias, veias e principais estruturas vasculares.
+                    </p>
+
+                </a>
+
+
+                <a href="#" class="card">
+
+                    <div class="card-icon">🫁</div>
+
+                    <h3>Esplancnologia</h3>
+
+                    <p>
+                        Órgãos e estruturas dos sistemas viscerais.
+                    </p>
+
+                </a>
+
+
+                <a href="#" class="card">
+
+                    <div class="card-icon">🧠</div>
+
+                    <h3>Neurologia</h3>
+
+                    <p>
+                        Sistema nervoso e suas principais estruturas.
+                    </p>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- FERRAMENTAS -->
+
+        <section id="ferramentas">
+
+            <div class="section-title">
+
+                <small>Aprenda praticando</small>
+
+                <h2>Ferramentas de estudo</h2>
+
+                <p>
+                    Recursos para transformar aquela maravilhosa experiência
+                    de "eu juro que sabia isso" em conhecimento de verdade.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+                <a href="#" class="card">
+
+                    <div class="card-icon">📝</div>
+
+                    <h3>Banco de questões</h3>
+
+                    <p>
+                        Questões organizadas por assunto e nível de dificuldade.
+                    </p>
+
+                </a>
+
+
+                <a href="#" class="card">
+
+                    <div class="card-icon">🧠</div>
+
+                    <h3>Quiz</h3>
+
+                    <p>
+                        Teste seus conhecimentos com perguntas aleatórias.
+                    </p>
+
+                </a>
+
+
+                <a href="#" class="card">
+
+                    <div class="card-icon">🎴</div>
+
+                    <h3>Flashcards</h3>
+
+                    <p>
+                        Revise estruturas e conceitos de forma rápida.
+                    </p>
+
+                </a>
+
+
+                <a href="#" class="card">
+
+                    <div class="card-icon">🔬</div>
+
+                    <h3>Atlas anatômico</h3>
+
+                    <p>
+                        Explore imagens e identifique estruturas anatômicas.
+                    </p>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- DESTAQUE -->
+
+        <section id="sobre">
+
+            <div class="highlight">
+
+                <div class="highlight-text">
+
+                    <h2>Estudar Anatomia não precisa ser decorar uma lista.</h2>
+
+                    <p>
+                        A proposta da monitoria é ajudar você a entender,
+                        reconhecer e relacionar as estruturas anatômicas,
+                        utilizando diferentes formas de estudo.
+                    </p>
+
+                </div>
+
+                <a href="#conteudos" class="button">
+                    Explorar conteúdos
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        Anatomia Descritiva II · Portal da Monitoria
+
+    </footer>
 
 </body>
 </html>
