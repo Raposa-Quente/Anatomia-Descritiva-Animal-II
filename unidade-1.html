@@ -60,7 +60,7 @@
         }
 
         /* =========================
-           HERO
+           APRESENTAÇÃO
         ========================= */
 
         .hero {
@@ -107,7 +107,7 @@
         ========================= */
 
         .system {
-            margin-bottom: 60px;
+            margin-bottom: 65px;
         }
 
         .system:last-child {
@@ -141,15 +141,15 @@
 
         .resources {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
         }
 
         .resource {
             background: #ffffff;
             border: 1px solid #e2dfd9;
             border-radius: 11px;
-            padding: 25px 20px;
+            padding: 25px 15px;
             text-align: center;
             text-decoration: none;
             color: #292929;
@@ -163,37 +163,28 @@
         }
 
         .resource-icon {
-            font-size: 30px;
+            font-size: 29px;
             margin-bottom: 12px;
         }
 
         .resource h3 {
-            font-size: 17px;
+            font-size: 16px;
             margin-bottom: 6px;
         }
 
         .resource p {
             color: #888;
-            font-size: 13px;
+            font-size: 12px;
         }
 
         /* =========================
-           EM BREVE
+           STATUS
         ========================= */
-
-        .coming {
-            opacity: 0.7;
-        }
-
-        .coming:hover {
-            transform: none;
-            box-shadow: none;
-        }
 
         .status {
             display: inline-block;
             margin-top: 10px;
-            font-size: 11px;
+            font-size: 10px;
             color: #806b4a;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -206,7 +197,7 @@
 
         .back {
             text-align: center;
-            padding: 20px 0 70px;
+            padding: 10px 0 70px;
         }
 
         .back a {
@@ -237,18 +228,18 @@
         }
 
         /* =========================
-           CELULAR
+           RESPONSIVIDADE
         ========================= */
 
-        @media (max-width: 850px) {
+        @media (max-width: 950px) {
 
             .resources {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
 
         }
 
-        @media (max-width: 550px) {
+        @media (max-width: 650px) {
 
             header {
                 flex-direction: column;
@@ -260,11 +251,19 @@
             }
 
             .resources {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .container {
                 width: 90%;
+            }
+
+        }
+
+        @media (max-width: 430px) {
+
+            .resources {
+                grid-template-columns: 1fr;
             }
 
         }
@@ -320,7 +319,7 @@
 
                 <div class="system-title">
 
-                    <small>Conteúdo I</small>
+                    <small>Sistema I</small>
 
                     <h2>🫀 Sistema Digestório</h2>
 
@@ -334,6 +333,8 @@
                 <div class="resources">
 
 
+                    <!-- MATERIAIS -->
+
                     <a href="#" class="resource">
 
                         <div class="resource-icon">
@@ -343,7 +344,7 @@
                         <h3>Materiais</h3>
 
                         <p>
-                            Arquivos e materiais da disciplina.
+                            Arquivos da disciplina.
                         </p>
 
                         <span class="status">
@@ -352,6 +353,8 @@
 
                     </a>
 
+
+                    <!-- RESUMOS -->
 
                     <a href="#" class="resource">
 
@@ -362,7 +365,7 @@
                         <h3>Resumos</h3>
 
                         <p>
-                            Resumos preparados para revisão.
+                            Material de revisão.
                         </p>
 
                         <span class="status">
@@ -371,6 +374,29 @@
 
                     </a>
 
+
+                    <!-- QUESTÕES -->
+
+                    <a href="#" class="resource">
+
+                        <div class="resource-icon">
+                            📝
+                        </div>
+
+                        <h3>Questões</h3>
+
+                        <p>
+                            Pratique seus conhecimentos.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </a>
+
+
+                    <!-- FLASHCARDS -->
 
                     <a href="#" class="resource">
 
@@ -381,7 +407,7 @@
                         <h3>Flashcards</h3>
 
                         <p>
-                            Revise os principais conceitos.
+                            Revisão rápida.
                         </p>
 
                         <span class="status">
@@ -391,16 +417,18 @@
                     </a>
 
 
+                    <!-- SIMULADOS -->
+
                     <a href="#" class="resource">
 
                         <div class="resource-icon">
                             🎯
                         </div>
 
-                        <h3>Simulado</h3>
+                        <h3>Simulados</h3>
 
                         <p>
-                            Teste seus conhecimentos.
+                            Teste sua preparação.
                         </p>
 
                         <span class="status">
@@ -421,7 +449,7 @@
 
                 <div class="system-title">
 
-                    <small>Conteúdo II</small>
+                    <small>Sistema II</small>
 
                     <h2>🫁 Sistema Respiratório</h2>
 
@@ -435,6 +463,8 @@
                 <div class="resources">
 
 
+                    <!-- MATERIAIS -->
+
                     <a href="#" class="resource">
 
                         <div class="resource-icon">
@@ -444,7 +474,7 @@
                         <h3>Materiais</h3>
 
                         <p>
-                            Arquivos e materiais da disciplina.
+                            Arquivos da disciplina.
                         </p>
 
                         <span class="status">
@@ -453,6 +483,8 @@
 
                     </a>
 
+
+                    <!-- RESUMOS -->
 
                     <a href="#" class="resource">
 
@@ -463,7 +495,7 @@
                         <h3>Resumos</h3>
 
                         <p>
-                            Resumos preparados para revisão.
+                            Material de revisão.
                         </p>
 
                         <span class="status">
@@ -472,6 +504,29 @@
 
                     </a>
 
+
+                    <!-- QUESTÕES -->
+
+                    <a href="#" class="resource">
+
+                        <div class="resource-icon">
+                            📝
+                        </div>
+
+                        <h3>Questões</h3>
+
+                        <p>
+                            Pratique seus conhecimentos.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </a>
+
+
+                    <!-- FLASHCARDS -->
 
                     <a href="#" class="resource">
 
@@ -482,7 +537,7 @@
                         <h3>Flashcards</h3>
 
                         <p>
-                            Revise os principais conceitos.
+                            Revisão rápida.
                         </p>
 
                         <span class="status">
@@ -492,16 +547,18 @@
                     </a>
 
 
+                    <!-- SIMULADOS -->
+
                     <a href="#" class="resource">
 
                         <div class="resource-icon">
                             🎯
                         </div>
 
-                        <h3>Simulado</h3>
+                        <h3>Simulados</h3>
 
                         <p>
-                            Teste seus conhecimentos.
+                            Teste sua preparação.
                         </p>
 
                         <span class="status">
