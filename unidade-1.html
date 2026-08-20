@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Unidade I | Anatomia Descritiva Animal II</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f3ef;
+            color: #292929;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           CABEÇALHO
+        ========================= */
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e4e1dc;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+            color: #292929;
+        }
+
+        .logo span {
+            color: #806b4a;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #806b4a;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            text-align: center;
+            padding: 75px 20px 65px;
+            background: #ebe7df;
+        }
+
+        .hero small {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #806b4a;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 62px);
+            margin: 15px 0 10px;
+            color: #252525;
+        }
+
+        .hero h2 {
+            font-size: 22px;
+            font-weight: normal;
+            color: #666;
+        }
+
+        /* =========================
+           CONTAINER
+        ========================= */
+
+        .container {
+            width: 84%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section {
+            padding: 65px 0;
+        }
+
+        /* =========================
+           SISTEMAS
+        ========================= */
+
+        .system {
+            margin-bottom: 60px;
+        }
+
+        .system:last-child {
+            margin-bottom: 0;
+        }
+
+        .system-title {
+            margin-bottom: 25px;
+        }
+
+        .system-title small {
+            color: #806b4a;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .system-title h2 {
+            font-size: 32px;
+            margin-top: 5px;
+        }
+
+        .system-title p {
+            color: #777;
+            margin-top: 5px;
+        }
+
+        /* =========================
+           RECURSOS
+        ========================= */
+
+        .resources {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .resource {
+            background: #ffffff;
+            border: 1px solid #e2dfd9;
+            border-radius: 11px;
+            padding: 25px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #292929;
+            transition: 0.2s;
+        }
+
+        .resource:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            border-color: #c8b99e;
+        }
+
+        .resource-icon {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .resource h3 {
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+
+        .resource p {
+            color: #888;
+            font-size: 13px;
+        }
+
+        /* =========================
+           EM BREVE
+        ========================= */
+
+        .coming {
+            opacity: 0.7;
+        }
+
+        .coming:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .status {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 11px;
+            color: #806b4a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        /* =========================
+           VOLTAR
+        ========================= */
+
+        .back {
+            text-align: center;
+            padding: 20px 0 70px;
+        }
+
+        .back a {
+            color: #806b4a;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .back a:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           RODAPÉ
+        ========================= */
+
+        footer {
+            background: #292929;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: #ddd;
+        }
+
+        /* =========================
+           CELULAR
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .resources {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 550px) {
+
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .resources {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <div class="logo">
+            Anatomia <span>Animal II</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Início</a>
+        </nav>
+
+    </header>
+
+
+    <!-- APRESENTAÇÃO -->
+
+    <section class="hero">
+
+        <small>Unidade I</small>
+
+        <h1>
+            Sistemas Digestório e Respiratório
+        </h1>
+
+        <h2>
+            Anatomia Descritiva Animal II
+        </h2>
+
+    </section>
+
+
+    <!-- CONTEÚDOS -->
+
+    <section>
+
+        <div class="container">
+
+
+            <!-- SISTEMA DIGESTÓRIO -->
+
+            <div class="system">
+
+                <div class="system-title">
+
+                    <small>Conteúdo I</small>
+
+                    <h2>🫀 Sistema Digestório</h2>
+
+                    <p>
+                        Materiais e ferramentas para o estudo do sistema digestório.
+                    </p>
+
+                </div>
+
+
+                <div class="resources">
+
+
+                    <a href="#" class="resource">
+
+                        <div class="resource-icon">
+                            📁
+                        </div>
+
+                        <h3>Materiais</h3>
+
+                        <p>
+                            Arquivos e materiais da disciplina.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </a>
+
+
+                    <a href="#" class="resource">
+
+                        <div class="resource-icon">
+                            📖
+                        </div>
+
+                        <h3>Resumos</h3>
+
+                        <p>
+                            Resumos preparados para revisão.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </a>
+
+
+                    <a href="#" class="resource">
+
+                        <div class="resource-icon">
+                            🧠
+                        </div>
+
+                        <h3>Flashcards</h3>
+
+                        <p>
+                            Revise os principais conceitos.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </a>
+
+
+                    <a href="#" class="resource">
+
+                        <div class="resource-icon">
+                            🎯
+                        </div>
+
+                        <h3>Simulado</h3>
+
+                        <p>
+                            Teste seus conhecimentos.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- SISTEMA RESPIRATÓRIO -->
+
+            <div class="system">
+
+                <div class="system-title">
+
+                    <small>Conteúdo II</small>
+
+                    <h2>🫁 Sistema Respiratório</h2>
+
+                    <p>
+                        Materiais e ferramentas para o estudo do sistema respiratório.
+                    </p>
+
+                </div>
+
+
+                <div class="resources">
+
+
+                    <a href="#" class="resource">
+
+                        <div class="resource-icon">
+                            📁
+                        </div>
+
+                        <h3>Materiais</h3>
+
+                        <p>
+                            Arquivos e materiais da disciplina.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </a>
+
+
+                    <a href="#" class="resource">
+
+                        <div class="resource-icon">
+                            📖
+                        </div>
+
+                        <h3>Resumos</h3>
+
+                        <p>
+                            Resumos preparados para revisão.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </a>
+
+
+                    <a href="#" class="resource">
+
+                        <div class="resource-icon">
+                            🧠
+                        </div>
+
+                        <h3>Flashcards</h3>
+
+                        <p>
+                            Revise os principais conceitos.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </a>
+
+
+                    <a href="#" class="resource">
+
+                        <div class="resource-icon">
+                            🎯
+                        </div>
+
+                        <h3>Simulado</h3>
+
+                        <p>
+                            Teste seus conhecimentos.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- VOLTAR -->
+
+    <div class="back">
+
+        <a href="index.html">
+            ← Voltar para a página inicial
+        </a>
+
+    </div>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        Anatomia Descritiva Animal II · Portal da Monitoria
+
+        <br><br>
+
+        Desenvolvido por <strong>Gabriel Mendes</strong>
+
+    </footer>
+
+
+</body>
+</html>
