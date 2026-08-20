@@ -1,0 +1,552 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Unidade I | Anatomia Descritiva Animal II</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f3ef;
+            color: #292929;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           CABEÇALHO
+        ========================= */
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e4e1dc;
+            padding: 18px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #292929;
+        }
+
+        .logo span {
+            color: #806b4a;
+        }
+
+        header a {
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        header a:hover {
+            color: #806b4a;
+        }
+
+        /* =========================
+           CABEÇALHO DA UNIDADE
+        ========================= */
+
+        .unit-header {
+            background: #ebe7df;
+            text-align: center;
+            padding: 75px 20px;
+        }
+
+        .unit-header small {
+            color: #806b4a;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        .unit-header h1 {
+            font-size: clamp(38px, 6vw, 65px);
+            margin: 15px 0;
+        }
+
+        .unit-header p {
+            color: #666;
+            max-width: 650px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        /* =========================
+           CONTEÚDO
+        ========================= */
+
+        .container {
+            width: 84%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section {
+            padding: 70px 0;
+        }
+
+        /* =========================
+           SISTEMAS
+        ========================= */
+
+        .system {
+            margin-bottom: 70px;
+        }
+
+        .system-title {
+            margin-bottom: 30px;
+        }
+
+        .system-title small {
+            color: #806b4a;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .system-title h2 {
+            font-size: 32px;
+            margin-top: 5px;
+        }
+
+        .system-title p {
+            color: #777;
+            margin-top: 5px;
+        }
+
+        /* =========================
+           MATERIAIS
+        ========================= */
+
+        .materials {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .material {
+            background: white;
+            border: 1px solid #e2dfd9;
+            border-radius: 11px;
+            padding: 25px;
+
+            text-decoration: none;
+            color: #292929;
+
+            transition: 0.2s;
+        }
+
+        .material:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 22px rgba(0,0,0,0.07);
+            border-color: #cfc8bd;
+        }
+
+        .material-icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .material h3 {
+            margin-bottom: 6px;
+        }
+
+        .material p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* =========================
+           EM BREVE
+        ========================= */
+
+        .soon {
+            opacity: 0.65;
+        }
+
+        /* =========================
+           RODAPÉ
+        ========================= */
+
+        footer {
+            background: #292929;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        /* =========================
+           CELULAR
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .materials {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            header {
+                padding: 18px 5%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <div class="logo">
+            Anatomia <span>Descritiva Animal II</span>
+        </div>
+
+        <a href="index.html">
+            ← Voltar para o início
+        </a>
+
+    </header>
+
+
+    <!-- TÍTULO -->
+
+    <section class="unit-header">
+
+        <small>Unidade I</small>
+
+        <h1>
+            Sistemas Digestório e Respiratório
+        </h1>
+
+        <p>
+            Materiais de estudo e ferramentas de revisão
+            relacionados aos sistemas digestório e respiratório.
+        </p>
+
+    </section>
+
+
+    <!-- CONTEÚDO -->
+
+    <section>
+
+        <div class="container">
+
+
+            <!-- SISTEMA DIGESTÓRIO -->
+
+            <div class="system">
+
+                <div class="system-title">
+
+                    <small>Sistema I</small>
+
+                    <h2>
+                        Sistema Digestório
+                    </h2>
+
+                    <p>
+                        Conteúdos e materiais relacionados ao sistema digestório.
+                    </p>
+
+                </div>
+
+
+                <div class="materials">
+
+
+                    <a href="#" class="material">
+
+                        <div class="material-icon">
+                            📚
+                        </div>
+
+                        <h3>
+                            Resumos
+                        </h3>
+
+                        <p>
+                            Resumos organizados para revisão do conteúdo.
+                        </p>
+
+                    </a>
+
+
+                    <a href="#" class="material">
+
+                        <div class="material-icon">
+                            🖥️
+                        </div>
+
+                        <h3>
+                            Slides
+                        </h3>
+
+                        <p>
+                            Slides e materiais utilizados nas aulas.
+                        </p>
+
+                    </a>
+
+
+                    <a href="#" class="material">
+
+                        <div class="material-icon">
+                            📝
+                        </div>
+
+                        <h3>
+                            Questões
+                        </h3>
+
+                        <p>
+                            Questões para testar seus conhecimentos.
+                        </p>
+
+                    </a>
+
+
+                    <a href="#" class="material">
+
+                        <div class="material-icon">
+                            🧠
+                        </div>
+
+                        <h3>
+                            Flashcards
+                        </h3>
+
+                        <p>
+                            Revisão rápida de conceitos e estruturas.
+                        </p>
+
+                    </a>
+
+
+                    <a href="#" class="material">
+
+                        <div class="material-icon">
+                            🎯
+                        </div>
+
+                        <h3>
+                            Simulados
+                        </h3>
+
+                        <p>
+                            Simulados para avaliar sua preparação.
+                        </p>
+
+                    </a>
+
+
+                    <a href="#" class="material">
+
+                        <div class="material-icon">
+                            📁
+                        </div>
+
+                        <h3>
+                            Materiais
+                        </h3>
+
+                        <p>
+                            Arquivos complementares disponíveis no Drive.
+                        </p>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- SISTEMA RESPIRATÓRIO -->
+
+            <div class="system">
+
+                <div class="system-title">
+
+                    <small>Sistema II</small>
+
+                    <h2>
+                        Sistema Respiratório
+                    </h2>
+
+                    <p>
+                        Conteúdos e materiais relacionados ao sistema respiratório.
+                    </p>
+
+                </div>
+
+
+                <div class="materials">
+
+
+                    <a href="#" class="material">
+
+                        <div class="material-icon">
+                            📚
+                        </div>
+
+                        <h3>
+                            Resumos
+                        </h3>
+
+                        <p>
+                            Resumos organizados para revisão do conteúdo.
+                        </p>
+
+                    </a>
+
+
+                    <a href="#" class="material">
+
+                        <div class="material-icon">
+                            🖥️
+                        </div>
+
+                        <h3>
+                            Slides
+                        </h3>
+
+                        <p>
+                            Slides e materiais utilizados nas aulas.
+                        </p>
+
+                    </a>
+
+
+                    <a href="#" class="material">
+
+                        <div class="material-icon">
+                            📝
+                        </div>
+
+                        <h3>
+                            Questões
+                        </h3>
+
+                        <p>
+                            Questões para testar seus conhecimentos.
+                        </p>
+
+                    </a>
+
+
+                    <a href="#" class="material">
+
+                        <div class="material-icon">
+                            🧠
+                        </div>
+
+                        <h3>
+                            Flashcards
+                        </h3>
+
+                        <p>
+                            Revisão rápida de conceitos e estruturas.
+                        </p>
+
+                    </a>
+
+
+                    <a href="#" class="material">
+
+                        <div class="material-icon">
+                            🎯
+                        </div>
+
+                        <h3>
+                            Simulados
+                        </h3>
+
+                        <p>
+                            Simulados para avaliar sua preparação.
+                        </p>
+
+                    </a>
+
+
+                    <a href="#" class="material">
+
+                        <div class="material-icon">
+                            📁
+                        </div>
+
+                        <h3>
+                            Materiais
+                        </h3>
+
+                        <p>
+                            Arquivos complementares disponíveis no Drive.
+                        </p>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            Desenvolvido por
+            <strong>Gabriel Mendes</strong>
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```
