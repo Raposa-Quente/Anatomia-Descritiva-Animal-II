@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -60,12 +61,12 @@
         }
 
         /* =========================
-           APRESENTAÇÃO / SOBRE
+           APRESENTAÇÃO
         ========================= */
 
         .hero {
             text-align: center;
-            padding: 95px 20px 85px;
+            padding: 90px 20px 75px;
             background: #ebe7df;
         }
 
@@ -77,23 +78,26 @@
         }
 
         .hero h1 {
-            font-size: clamp(36px, 6vw, 68px);
-            margin: 15px 0 20px;
+            font-size: clamp(38px, 7vw, 72px);
+            margin: 15px 0;
             color: #252525;
         }
 
         .hero p {
             max-width: 720px;
-            margin: 0 auto 14px;
+            margin: auto;
             color: #666;
             font-size: 17px;
         }
 
-        .hero .monitor {
-            margin-top: 25px;
+        .hero .monitoria {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #555;
+        }
+
+        .hero .monitoria strong {
             color: #806b4a;
-            font-size: 14px;
-            font-weight: bold;
         }
 
         /* =========================
@@ -249,7 +253,7 @@
     <header>
 
         <div class="logo">
-            Anatomia <span>Descritiva Animal II</span>
+            Anatomia <span>Animal II</span>
         </div>
 
         <nav>
@@ -260,7 +264,7 @@
     </header>
 
 
-    <!-- APRESENTAÇÃO / SOBRE -->
+    <!-- APRESENTAÇÃO -->
 
     <section class="hero" id="sobre">
 
@@ -271,19 +275,15 @@
         </h1>
 
         <p>
-            Este espaço foi desenvolvido para reunir materiais e ferramentas
-            que auxiliem os acadêmicos no estudo de Anatomia Descritiva Animal II.
+            Este portal foi desenvolvido para reunir materiais e recursos
+            de estudo de Anatomia Descritiva Animal II em um único espaço,
+            facilitando o acesso aos conteúdos da disciplina.
         </p>
 
-        <p>
-            Aqui você encontrará conteúdos organizados de acordo com as unidades
-            da disciplina, além de resumos, slides, questões, flashcards,
-            simulados e outros materiais de apoio.
+        <p class="monitoria">
+            <strong>Monitoria:</strong> materiais, resumos, questões,
+            flashcards, simulados e outros recursos de apoio aos estudos.
         </p>
-
-        <div class="monitor">
-            Monitoria · Medicina Veterinária
-        </div>
 
     </section>
 
@@ -392,12 +392,17 @@
 
     <footer>
 
-        <p>
+        <div>
+            Anatomia Descritiva Animal II · Portal da Monitoria
+        </div>
+
+        <div style="margin-top: 8px;">
             Desenvolvido por <strong>Gabriel Mendes</strong>
-        </p>
+        </div>
 
     </footer>
 
 
 </body>
 </html>
+```
