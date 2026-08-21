@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simulados - Sistema Digestório | Anatomia Descritiva Animal II</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f3ef;
+            color: #292929;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           CABEÇALHO
+        ========================= */
+
+        header {
+
+            background: #ffffff;
+
+            border-bottom: 1px solid #e4e1dc;
+
+            padding: 18px 8%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+        }
+
+
+        .logo {
+
+            font-size: 21px;
+
+            font-weight: bold;
+
+            color: #292929;
+
+        }
+
+
+        .logo span {
+
+            color: #806b4a;
+
+        }
+
+
+        nav a {
+
+            text-decoration: none;
+
+            color: #555;
+
+            font-size: 14px;
+
+        }
+
+
+        nav a:hover {
+
+            color: #806b4a;
+
+        }
+
+
+        /* =========================
+           APRESENTAÇÃO
+        ========================= */
+
+        .hero {
+
+            text-align: center;
+
+            padding: 75px 20px 65px;
+
+            background: #ebe7df;
+
+        }
+
+
+        .hero small {
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            color: #806b4a;
+
+            font-weight: bold;
+
+        }
+
+
+        .hero h1 {
+
+            font-size: clamp(38px, 6vw, 62px);
+
+            margin: 15px 0 10px;
+
+            color: #252525;
+
+        }
+
+
+        .hero h2 {
+
+            font-size: 22px;
+
+            font-weight: normal;
+
+            color: #666;
+
+        }
+
+
+        .hero p {
+
+            max-width: 650px;
+
+            margin: 15px auto 0;
+
+            color: #777;
+
+            font-size: 15px;
+
+        }
+
+
+        /* =========================
+           CONTAINER
+        ========================= */
+
+        .container {
+
+            width: 84%;
+
+            max-width: 1050px;
+
+            margin: auto;
+
+        }
+
+
+        section {
+
+            padding: 65px 0;
+
+        }
+
+
+        /* =========================
+           SIMULADOS
+        ========================= */
+
+        .simulados {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 22px;
+
+        }
+
+
+        .simulado {
+
+            background: #ffffff;
+
+            border: 1px solid #e2dfd9;
+
+            border-radius: 12px;
+
+            padding: 35px 25px;
+
+            text-align: center;
+
+            transition: 0.25s;
+
+        }
+
+
+        .simulado:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+
+            border-color: #c8b99e;
+
+        }
+
+
+        .simulado-number {
+
+            font-size: 14px;
+
+            letter-spacing: 2px;
+
+            color: #806b4a;
+
+            font-weight: bold;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .simulado-icon {
+
+            font-size: 42px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .simulado h2 {
+
+            font-size: 23px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .simulado p {
+
+            color: #777;
+
+            font-size: 14px;
+
+        }
+
+
+        .button {
+
+            display: inline-block;
+
+            margin-top: 22px;
+
+            padding: 11px 23px;
+
+            border-radius: 7px;
+
+            background: #806b4a;
+
+            color: #ffffff;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            text-decoration: none;
+
+            transition: 0.2s;
+
+        }
+
+
+        .button:hover {
+
+            background: #69583d;
+
+        }
+
+
+        .status {
+
+            display: block;
+
+            margin-top: 12px;
+
+            font-size: 10px;
+
+            color: #806b4a;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            font-weight: bold;
+
+        }
+
+
+        /* =========================
+           VOLTAR
+        ========================= */
+
+        .back {
+
+            text-align: center;
+
+            padding: 10px 0 70px;
+
+        }
+
+
+        .back a {
+
+            color: #806b4a;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            font-size: 14px;
+
+        }
+
+
+        .back a:hover {
+
+            text-decoration: underline;
+
+        }
+
+
+        /* =========================
+           RODAPÉ
+        ========================= */
+
+        footer {
+
+            background: #292929;
+
+            color: #aaa;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            font-size: 13px;
+
+        }
+
+
+        footer strong {
+
+            color: #ddd;
+
+        }
+
+
+        /* =========================
+           RESPONSIVIDADE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .simulados {
+
+                grid-template-columns: 1fr;
+
+                max-width: 500px;
+
+                margin: auto;
+
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 12px;
+
+            }
+
+
+            .container {
+
+                width: 90%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <div class="logo">
+
+            Anatomia <span>Animal II</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="unidade-1.html">
+                ← Unidade I
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- APRESENTAÇÃO -->
+
+    <section class="hero">
+
+        <small>Unidade I</small>
+
+        <h1>
+            Simulados
+        </h1>
+
+        <h2>
+            Sistema Digestório
+        </h2>
+
+        <p>
+            Teste seus conhecimentos sobre o sistema digestório.
+        </p>
+
+    </section>
+
+
+
+    <!-- SIMULADOS -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="simulados">
+
+
+                <!-- SIMULADO 1 -->
+
+                <div class="simulado">
+
+                    <div class="simulado-number">
+                        01
+                    </div>
+
+                    <div class="simulado-icon">
+                        🎯
+                    </div>
+
+                    <h2>
+                        Simulado 1
+                    </h2>
+
+                    <p>
+                        Teste seus conhecimentos sobre
+                        o sistema digestório.
+                    </p>
+
+                    <a href="#" class="button">
+                        Começar
+                    </a>
+
+                    <span class="status">
+                        Em breve
+                    </span>
+
+                </div>
+
+
+
+                <!-- SIMULADO 2 -->
+
+                <div class="simulado">
+
+                    <div class="simulado-number">
+                        02
+                    </div>
+
+                    <div class="simulado-icon">
+                        🎯
+                    </div>
+
+                    <h2>
+                        Simulado 2
+                    </h2>
+
+                    <p>
+                        Teste seus conhecimentos sobre
+                        o sistema digestório.
+                    </p>
+
+                    <a href="#" class="button">
+                        Começar
+                    </a>
+
+                    <span class="status">
+                        Em breve
+                    </span>
+
+                </div>
+
+
+
+                <!-- SIMULADO 3 -->
+
+                <div class="simulado">
+
+                    <div class="simulado-number">
+                        03
+                    </div>
+
+                    <div class="simulado-icon">
+                        🎯
+                    </div>
+
+                    <h2>
+                        Simulado 3
+                    </h2>
+
+                    <p>
+                        Teste seus conhecimentos sobre
+                        o sistema digestório.
+                    </p>
+
+                    <a href="#" class="button">
+                        Começar
+                    </a>
+
+                    <span class="status">
+                        Em breve
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- VOLTAR -->
+
+    <div class="back">
+
+        <a href="unidade-1.html">
+
+            ← Voltar para a Unidade I
+
+        </a>
+
+    </div>
+
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        Anatomia Descritiva Animal II · Portal da Monitoria
+
+        <br><br>
+
+        Desenvolvido por <strong>Gabriel Mendes</strong>
+
+    </footer>
+
+
+</body>
+
+</html>
