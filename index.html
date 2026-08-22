@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Anatomia Descritiva Animal II | Monitoria</title>
+    <title>ANATOMIA DESCRITIVA ANIMAL II</title>
 
     <style>
 
@@ -14,297 +17,741 @@
             padding: 0;
         }
 
+
+        :root {
+
+            --background: #070b10;
+
+            --surface: #111923;
+
+            --surface-hover: #151f2b;
+
+            --border: #26313e;
+
+            --text: #f4f7fa;
+
+            --muted: #9aa7b5;
+
+            --blue: #1594ed;
+
+            --blue-light: #42b3ff;
+
+            --green: #4ade80;
+
+        }
+
+
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f3ef;
-            color: #292929;
-            line-height: 1.6;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: var(--background);
+
+            color: var(--text);
+
+            line-height: 1.5;
+
         }
 
-        /* =========================
+
+        /* =================================
            CABEÇALHO
-        ========================= */
+        ================================= */
 
         header {
-            background: #ffffff;
-            border-bottom: 1px solid #e4e1dc;
-            padding: 18px 8%;
+
+            height: 68px;
+
+            border-bottom: 1px solid #202832;
+
             display: flex;
-            justify-content: space-between;
+
             align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 6%;
+
+            background: rgba(7, 11, 16, 0.96);
+
         }
 
-        .logo {
-            font-size: 21px;
-            font-weight: bold;
-            color: #292929;
-        }
 
-        .logo span {
-            color: #806b4a;
-        }
+        .brand {
 
-        nav a {
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
             text-decoration: none;
-            color: #555;
-            margin-left: 25px;
+
+            color: var(--text);
+
+        }
+
+
+        .brand img {
+
+            width: 32px;
+
+            height: 32px;
+
+            object-fit: contain;
+
+        }
+
+
+        .brand span {
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.2px;
+
+        }
+
+
+        .nav-link {
+
+            color: var(--muted);
+
+            text-decoration: none;
+
             font-size: 14px;
+
+            transition: 0.2s;
+
         }
 
-        nav a:hover {
-            color: #806b4a;
+
+        .nav-link:hover {
+
+            color: var(--text);
+
         }
 
-        /* =========================
-           APRESENTAÇÃO
-        ========================= */
+
+        /* =================================
+           HERO
+        ================================= */
 
         .hero {
-            text-align: center;
-            padding: 90px 20px 75px;
-            background: #ebe7df;
+
+            position: relative;
+
+            min-height: 520px;
+
+            padding: 145px 6% 100px;
+
+            overflow: hidden;
+
         }
 
-        .hero small {
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #806b4a;
-            font-weight: bold;
+
+        .hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 520px;
+
+            height: 420px;
+
+            right: -160px;
+
+            top: 0;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(21, 148, 237, 0.22),
+                    rgba(21, 148, 237, 0) 70%
+                );
+
+            pointer-events: none;
+
         }
+
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 1;
+
+            max-width: 720px;
+
+        }
+
+
+        .eyebrow {
+
+            color: var(--blue-light);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
+
+        }
+
 
         .hero h1 {
-            font-size: clamp(38px, 7vw, 72px);
-            margin: 15px 0;
-            color: #252525;
+
+            font-size: clamp(38px, 5vw, 62px);
+
+            line-height: 1.05;
+
+            letter-spacing: -1.5px;
+
+            margin-bottom: 27px;
+
         }
 
-        .hero p {
-            max-width: 720px;
-            margin: auto;
-            color: #666;
-            font-size: 17px;
-        }
 
-        .hero .monitoria {
-            margin-top: 20px;
+        .hero-description {
+
+            border-left: 2px solid var(--blue);
+
+            padding-left: 19px;
+
+            max-width: 690px;
+
+            color: #b7c2ce;
+
             font-size: 15px;
-            color: #555;
+
+            line-height: 1.45;
+
         }
 
-        .hero .monitoria strong {
-            color: #806b4a;
+
+        .hero-description p + p {
+
+            margin-top: 18px;
+
         }
 
-        /* =========================
-           CONTAINER
-        ========================= */
 
-        .container {
-            width: 84%;
-            max-width: 1100px;
-            margin: auto;
+        /* =================================
+           CONTEÚDO
+        ================================= */
+
+        .units-section {
+
+            border-top: 1px solid #202832;
+
+            padding: 62px 6% 60px;
+
         }
 
-        section {
-            padding: 70px 0;
+
+        .section-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+            gap: 50px;
+
+            margin-bottom: 42px;
+
         }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
 
-        .section-title small {
-            color: #806b4a;
+        .section-label {
+
+            color: var(--blue-light);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: bold;
+
+            margin-bottom: 12px;
+
         }
 
-        .section-title h2 {
-            font-size: 34px;
-            margin-top: 5px;
+
+        .section-header h2 {
+
+            font-size: 23px;
+
+            line-height: 1.2;
+
         }
 
-        .section-title p {
-            color: #777;
-            margin-top: 8px;
+
+        .section-note {
+
+            max-width: 390px;
+
+            color: #9fb0c0;
+
+            border-left: 2px solid var(--blue);
+
+            padding-left: 15px;
+
+            font-size: 13px;
+
+            line-height: 1.35;
+
         }
 
-        /* =========================
-           UNIDADES
-        ========================= */
+
+        /* =================================
+           CARDS
+        ================================= */
 
         .units {
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+
         }
 
-        .unit {
-            background: white;
-            border: 1px solid #e2dfd9;
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            transition: 0.2s;
+
+        .unit-card {
+
+            position: relative;
+
+            min-height: 300px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+
+            border-radius: 17px;
+
+            padding: 29px 27px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                background 0.25s ease;
+
         }
 
-        .unit:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+
+        .unit-card.available {
+
+            border-top: 2px solid var(--blue);
+
         }
+
+
+        .unit-card:hover {
+
+            transform: translateY(-5px);
+
+            background: var(--surface-hover);
+
+            border-color: #344454;
+
+        }
+
+
+        .unit-top {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+        }
+
+
+        .unit-label {
+
+            color: var(--blue-light);
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            letter-spacing: 2.5px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .unit-card:not(.available) .unit-label {
+
+            color: #8996a4;
+
+        }
+
 
         .unit-number {
-            color: #806b4a;
-            font-weight: bold;
+
+            position: absolute;
+
+            top: 17px;
+
+            right: 25px;
+
+            font-size: 65px;
+
+            font-weight: 700;
+
+            line-height: 1;
+
+            color: rgba(132, 148, 165, 0.22);
+
+            user-select: none;
+
+        }
+
+
+        .unit-content {
+
+            margin-top: 70px;
+
+        }
+
+
+        .unit-content h3 {
+
+            max-width: 270px;
+
+            font-size: 22px;
+
+            line-height: 1.15;
+
+            letter-spacing: -0.3px;
+
+        }
+
+
+        .unit-status {
+
+            margin-top: 25px;
+
             font-size: 13px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+
+            color: var(--muted);
+
         }
 
-        .unit h3 {
-            margin: 12px 0;
-            font-size: 23px;
+
+        .unit-status.available {
+
+            color: var(--green);
+
         }
 
-        .unit p {
-            color: #777;
-            font-size: 14px;
-            min-height: 45px;
-        }
 
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
+        .unit-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            margin-top: 17px;
+
+            width: 100%;
+
+            padding: 11px 15px;
+
             border-radius: 7px;
-            background: #806b4a;
+
+            background: var(--blue);
+
             color: white;
+
             text-decoration: none;
-            font-size: 14px;
-            font-weight: bold;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            transition: 0.2s;
+
         }
 
-        .button:hover {
-            background: #69583d;
+
+        .unit-button:hover {
+
+            background: var(--blue-light);
+
         }
 
-        .coming {
-            background: #eeeeeb;
-            color: #888;
-            cursor: default;
+
+        .unit-disabled {
+
+            color: #8794a2;
+
+            font-size: 13px;
+
+            margin-top: 25px;
+
         }
 
-        /* =========================
+
+        /* =================================
            RODAPÉ
-        ========================= */
+        ================================= */
 
         footer {
-            background: #292929;
-            color: #aaa;
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 13px;
+
+            border-top: 1px solid #202832;
+
+            padding: 28px 6%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            color: #8793a0;
+
+            font-size: 11px;
+
         }
+
 
         footer strong {
-            color: #ddd;
+
+            color: #bfc9d3;
+
         }
 
-        /* =========================
-           CELULAR
-        ========================= */
 
-        @media (max-width: 800px) {
+        /* =================================
+           RESPONSIVIDADE
+        ================================= */
 
-            header {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            nav a {
-                margin: 0 8px;
-            }
+        @media (max-width: 850px) {
 
             .units {
+
                 grid-template-columns: 1fr;
+
             }
 
-            .container {
-                width: 90%;
+
+            .unit-card {
+
+                min-height: 250px;
+
+            }
+
+
+            .section-header {
+
+                flex-direction: column;
+
+                gap: 25px;
+
+            }
+
+
+            .section-note {
+
+                max-width: 100%;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            header {
+
+                padding: 0 5%;
+
+            }
+
+
+            .hero {
+
+                padding: 105px 5% 80px;
+
+                min-height: auto;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 40px;
+
+            }
+
+
+            .units-section {
+
+                padding-left: 5%;
+
+                padding-right: 5%;
+
+            }
+
+
+            footer {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
             }
 
         }
 
     </style>
+
 </head>
 
 
 <body>
 
-    <!-- CABEÇALHO -->
+
+    <!-- =================================
+         CABEÇALHO
+    ================================= -->
 
     <header>
 
-        <div class="logo">
-            Anatomia <span>Animal II</span>
-        </div>
+        <a href="index.html" class="brand">
 
-        <nav>
-            <a href="#unidades">Unidades</a>
-            <a href="#sobre">Sobre</a>
-        </nav>
+            <img
+                src="imagens/logo-raposa.png"
+                alt="Logo da Anatomia Descritiva Animal II"
+            >
+
+            <span>
+                ANATOMIA DESCRITIVA ANIMAL II
+            </span>
+
+        </a>
+
+
+        <a href="#unidades" class="nav-link">
+            Unidades
+        </a>
 
     </header>
 
 
-    <!-- APRESENTAÇÃO -->
 
-    <section class="hero" id="sobre">
+    <!-- =================================
+         APRESENTAÇÃO
+    ================================= -->
 
-        <small>Portal da Monitoria</small>
+    <main>
 
-        <h1>
-            ANATOMIA DESCRITIVA ANIMAL II
-        </h1>
+        <section class="hero">
 
-        <p>
-            Este portal foi desenvolvido para reunir materiais e recursos
-            de estudo de Anatomia Descritiva Animal II em um único espaço,
-            facilitando o acesso aos conteúdos da disciplina.
-        </p>
+            <div class="hero-content">
 
-        <p class="monitoria">
-            <strong>Monitoria:</strong> materiais, resumos, questões,
-            flashcards, simulados e outros recursos de apoio aos estudos.
-        </p>
-
-    </section>
+                <div class="eyebrow">
+                    Portal da Monitoria
+                </div>
 
 
-    <!-- UNIDADES -->
+                <h1>
+                    Portal da Monitoria Veterinária
+                </h1>
 
-    <section id="unidades">
 
-        <div class="container">
+                <div class="hero-description">
 
-            <div class="section-title">
+                    <p>
+                        Este portal foi desenvolvido para reunir
+                        materiais e recursos de estudo da disciplina
+                        de Anatomia Descritiva Animal II em um único
+                        espaço, facilitando o acesso aos conteúdos.
+                    </p>
 
-                <small>Conteúdo da disciplina</small>
 
-                <h2>Escolha uma unidade</h2>
+                    <p>
+                        Monitoria: materiais, resumos, questões,
+                        flashcards, simulados e outros recursos
+                        de apoio aos estudos.
+                    </p>
 
-                <p>
-                    Os materiais serão disponibilizados conforme o andamento
-                    da disciplina.
-                </p>
+                </div>
 
             </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             UNIDADES
+        ================================= -->
+
+        <section class="units-section" id="unidades">
+
+            <div class="section-header">
+
+                <div>
+
+                    <div class="section-label">
+                        Conteúdo da disciplina
+                    </div>
+
+                    <h2>
+                        Escolha uma unidade
+                    </h2>
+
+                </div>
+
+
+                <div class="section-note">
+
+                    Os materiais serão disponibilizados
+                    conforme o andamento da disciplina.
+
+                </div>
+
+            </div>
+
 
 
             <div class="units">
@@ -312,82 +759,128 @@
 
                 <!-- UNIDADE I -->
 
-                <div class="unit">
+                <article class="unit-card available">
 
-                    <div class="unit-number">
-                        Unidade I
+                    <div class="unit-top">
+
+                        <div class="unit-label">
+                            Unidade I
+                        </div>
+
                     </div>
 
-                    <h3>
-                        Sistemas Digestório e Respiratório
-                    </h3>
 
-                    <p>
-                        Estudo das estruturas e relações anatômicas
-                        dos sistemas digestório e respiratório.
-                    </p>
+                    <div class="unit-number">
+                        01
+                    </div>
 
-                    <a href="unidade-1.html" class="button">
+
+                    <div class="unit-content">
+
+                        <h3>
+                            Sistemas Digestório e Respiratório
+                        </h3>
+
+                        <div class="unit-status available">
+                            Disponível
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="unidade-1.html"
+                        class="unit-button"
+                    >
+
+                        ↗
+
                         Acessar unidade
+
                     </a>
 
-                </div>
+                </article>
+
 
 
                 <!-- UNIDADE II -->
 
-                <div class="unit">
+                <article class="unit-card">
 
-                    <div class="unit-number">
-                        Unidade II
+                    <div class="unit-top">
+
+                        <div class="unit-label">
+                            Unidade II
+                        </div>
+
                     </div>
 
-                    <h3>
-                        Sistemas Reprodutor e Urinário
-                    </h3>
 
-                    <p>
-                        Sistemas masculino, feminino e sistema urinário.
-                    </p>
+                    <div class="unit-number">
+                        02
+                    </div>
 
-                    <a href="#" class="button coming">
-                        Em breve
-                    </a>
 
-                </div>
+                    <div class="unit-content">
+
+                        <h3>
+                            Sistemas Reprodutor e Urinário
+                        </h3>
+
+                        <div class="unit-disabled">
+                            Em breve
+                        </div>
+
+                    </div>
+
+                </article>
+
 
 
                 <!-- UNIDADE III -->
 
-                <div class="unit">
+                <article class="unit-card">
 
-                    <div class="unit-number">
-                        Unidade III
+                    <div class="unit-top">
+
+                        <div class="unit-label">
+                            Unidade III
+                        </div>
+
                     </div>
 
-                    <h3>
-                        Tegumento
-                    </h3>
 
-                    <p>
-                        Estudo das estruturas do sistema tegumentar.
-                    </p>
+                    <div class="unit-number">
+                        03
+                    </div>
 
-                    <a href="#" class="button coming">
-                        Em breve
-                    </a>
 
-                </div>
+                    <div class="unit-content">
+
+                        <h3>
+                            Tegumento
+                        </h3>
+
+                        <div class="unit-disabled">
+                            Em breve
+                        </div>
+
+                    </div>
+
+                </article>
 
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
+    </main>
 
 
-    <!-- RODAPÉ -->
+
+    <!-- =================================
+         RODAPÉ
+    ================================= -->
 
     <footer>
 
@@ -395,7 +888,8 @@
             Anatomia Descritiva Animal II · Portal da Monitoria
         </div>
 
-        <div style="margin-top: 8px;">
+
+        <div>
             Desenvolvido por <strong>Gabriel Mendes</strong>
         </div>
 
@@ -403,4 +897,5 @@
 
 
 </body>
+
 </html>
