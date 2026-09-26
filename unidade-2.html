@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Unidade II | ANATOMIA DESCRITIVA ANIMAL II</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+
+            --background: #070b10;
+            --surface: #111923;
+            --surface-hover: #151f2b;
+            --border: #26313e;
+            --text: #f4f7fa;
+            --muted: #9aa7b5;
+            --blue: #1594ed;
+            --blue-light: #42b3ff;
+            --green: #4ade80;
+
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.5;
+
+        }
+
+        /* =================================
+           CABEÇALHO
+        ================================= */
+
+        header {
+
+            height: 68px;
+
+            border-bottom: 1px solid #202832;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 6%;
+
+            background: rgba(7, 11, 16, 0.96);
+
+        }
+
+        .brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+            text-decoration: none;
+
+            color: var(--text);
+
+        }
+
+        .brand img {
+
+            width: 52px;
+            height: 52px;
+
+            object-fit: contain;
+
+        }
+
+        .brand span {
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.2px;
+
+        }
+
+        .nav-link {
+
+            color: var(--muted);
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            transition: 0.2s;
+
+        }
+
+        .nav-link:hover {
+            color: var(--text);
+        }
+
+        /* =================================
+           HERO
+        ================================= */
+
+        .hero {
+
+            position: relative;
+
+            min-height: 430px;
+
+            padding: 120px 6% 90px;
+
+            overflow: hidden;
+
+        }
+
+        .hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 520px;
+            height: 420px;
+
+            right: -160px;
+            top: 0;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(21, 148, 237, 0.22),
+                    rgba(21, 148, 237, 0) 70%
+                );
+
+            pointer-events: none;
+
+        }
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 1;
+
+            max-width: 850px;
+
+        }
+
+        .eyebrow {
+
+            color: var(--blue-light);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
+
+        }
+
+        .hero h1 {
+
+            font-size: clamp(38px, 5vw, 62px);
+
+            line-height: 1.05;
+
+            letter-spacing: -1.5px;
+
+            margin-bottom: 22px;
+
+        }
+
+        .hero-subtitle {
+
+            color: #b7c2ce;
+
+            font-size: 16px;
+
+            border-left: 2px solid var(--blue);
+
+            padding-left: 18px;
+
+            max-width: 650px;
+
+        }
+
+        /* =================================
+           CONTEÚDO
+        ================================= */
+
+        .content {
+
+            padding: 55px 6% 70px;
+
+        }
+
+        .content-header {
+
+            margin-bottom: 55px;
+
+        }
+
+        .section-label {
+
+            color: var(--blue-light);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 12px;
+
+        }
+
+        .content-header h2 {
+
+            font-size: 25px;
+
+            line-height: 1.2;
+
+        }
+
+        /* =================================
+           SISTEMAS
+        ================================= */
+
+        .system {
+
+            margin-bottom: 70px;
+
+        }
+
+        .system:last-child {
+            margin-bottom: 0;
+        }
+
+        .system-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+            gap: 40px;
+
+            margin-bottom: 28px;
+
+        }
+
+        .system-title {
+
+            max-width: 650px;
+
+        }
+
+        .system-title small {
+
+            color: var(--blue-light);
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            letter-spacing: 2.5px;
+
+            text-transform: uppercase;
+
+        }
+
+        .system-title h2 {
+
+            font-size: 30px;
+
+            line-height: 1.15;
+
+            margin-top: 7px;
+
+        }
+
+        .system-title p {
+
+            color: var(--muted);
+
+            font-size: 13px;
+
+            margin-top: 9px;
+
+        }
+
+        /* =================================
+           RECURSOS
+        ================================= */
+
+        .resources {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 15px;
+
+        }
+
+        .resource {
+
+            position: relative;
+
+            isolation: isolate;
+
+            min-height: 190px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+
+            border-radius: 14px;
+
+            padding: 25px 17px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: flex-start;
+
+            justify-content: space-between;
+
+            overflow: hidden;
+
+            text-decoration: none;
+
+            color: var(--text);
+
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                background 0.25s ease;
+
+        }
+
+        /* =================================
+           IMAGEM AO PASSAR O MOUSE
+        ================================= */
+
+        .resource::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background-image: var(--resource-image);
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-repeat: no-repeat;
+
+            opacity: 0;
+
+            transform: scale(1.08);
+
+            transition:
+                opacity 0.35s ease,
+                transform 0.5s ease;
+
+            z-index: -2;
+
+        }
+
+        .resource::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background: rgba(7, 11, 16, 0.78);
+
+            opacity: 0;
+
+            transition: opacity 0.35s ease;
+
+            z-index: -1;
+
+        }
+
+        .resource:hover {
+
+            transform: translateY(-5px);
+
+            border-color: #344454;
+
+            background: var(--surface-hover);
+
+        }
+
+        .resource:hover::before {
+
+            opacity: 0.7;
+
+            transform: scale(1);
+
+        }
+
+        .resource:hover::after {
+            opacity: 1;
+        }
+
+        .resource > * {
+
+            position: relative;
+
+            z-index: 1;
+
+        }
+
+        /* =================================
+           ÍCONE E TEXTO
+        ================================= */
+
+        .resource-icon {
+
+            font-size: 27px;
+
+            margin-bottom: 15px;
+
+        }
+
+        .resource h3 {
+
+            font-size: 16px;
+
+            line-height: 1.2;
+
+            margin-bottom: 6px;
+
+        }
+
+        .resource p {
+
+            color: var(--muted);
+
+            font-size: 11px;
+
+            line-height: 1.4;
+
+        }
+
+        .resource:hover p {
+            color: #c6d0da;
+        }
+
+        .status {
+
+            display: inline-block;
+
+            margin-top: 15px;
+
+            color: #8794a2;
+
+            font-size: 9px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            font-weight: 700;
+
+        }
+
+        /* =================================
+           VOLTAR
+        ================================= */
+
+        .back {
+
+            padding: 0 6% 70px;
+
+        }
+
+        .back a {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            color: var(--muted);
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            transition: 0.2s;
+
+        }
+
+        .back a:hover {
+            color: var(--text);
+        }
+
+        /* =================================
+           RODAPÉ
+        ================================= */
+
+        footer {
+
+            border-top: 1px solid #202832;
+
+            padding: 28px 6%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            color: #8793a0;
+
+            font-size: 11px;
+
+        }
+
+        footer strong {
+            color: #bfc9d3;
+        }
+
+        /* =================================
+           RESPONSIVIDADE
+        ================================= */
+
+        @media (max-width: 1000px) {
+
+            .resources {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+
+            }
+
+        }
+
+        @media (max-width: 750px) {
+
+            .system-header {
+
+                flex-direction: column;
+
+                gap: 20px;
+
+            }
+
+            .resources {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 0 5%;
+            }
+
+            .hero {
+
+                padding:
+                    95px 5%
+                    75px;
+
+                min-height: auto;
+
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .content {
+
+                padding-left: 5%;
+                padding-right: 5%;
+
+            }
+
+            .resources {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+            }
+
+            .back {
+
+                padding-left: 5%;
+                padding-right: 5%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         CABEÇALHO
+    ================================= -->
+
+    <header>
+
+        <a
+            href="index.html"
+            class="brand"
+        >
+
+            <img
+                src="imagens/logo_raposa_transparente_canva.png"
+                alt="Logo da Anatomia Descritiva Animal II"
+            >
+
+            <span>
+                ANATOMIA DESCRITIVA ANIMAL II
+            </span>
+
+        </a>
+
+
+        <a
+            href="index.html"
+            class="nav-link"
+        >
+            Início
+        </a>
+
+    </header>
+
+
+    <!-- =================================
+         APRESENTAÇÃO
+    ================================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Unidade II
+            </div>
+
+            <h1>
+                Sistema Reprodutor e Sistema Urinário
+            </h1>
+
+            <div class="hero-subtitle">
+
+                Materiais e recursos de estudo da
+                Unidade II de Anatomia Descritiva Animal II.
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         CONTEÚDOS
+    ================================= -->
+
+    <main class="content">
+
+        <div class="content-header">
+
+            <div class="section-label">
+                Conteúdos da unidade
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             SISTEMA REPRODUTOR
+        ================================= -->
+
+        <section class="system">
+
+            <div class="system-header">
+
+                <div class="system-title">
+
+                    <small>
+                        Conteúdo I
+                    </small>
+
+                    <h2>
+                        🧬 Sistema Reprodutor
+                    </h2>
+
+                    <p>
+                        Materiais e ferramentas para o estudo
+                        do sistema reprodutor.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="resources">
+
+
+                <!-- MATERIAIS -->
+
+                <a
+                    href="#"
+                    class="resource"
+                    style="--resource-image: url('imagens/reprodutor-materiais.jpg');"
+                >
+
+                    <div class="resource-icon">
+                        📁
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Materiais
+                        </h3>
+
+                        <p>
+                            Arquivos da disciplina.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- RESUMOS -->
+
+                <a
+                    href="#"
+                    class="resource"
+                    style="--resource-image: url('imagens/reprodutor-resumos.jpg');"
+                >
+
+                    <div class="resource-icon">
+                        📖
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Resumos
+                        </h3>
+
+                        <p>
+                            Material de revisão.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- QUESTÕES -->
+
+                <a
+                    href="#"
+                    class="resource"
+                    style="--resource-image: url('imagens/reprodutor-questoes.jpg');"
+                >
+
+                    <div class="resource-icon">
+                        📝
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Questões
+                        </h3>
+
+                        <p>
+                            Pratique seus conhecimentos.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- ATLAS -->
+
+                <a
+                    href="#"
+                    class="resource"
+                    style="--resource-image: url('imagens/reprodutor-atlas.jpg');"
+                >
+
+                    <div class="resource-icon">
+                        🦴
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Atlas
+                        </h3>
+
+                        <p>
+                            Consulte estruturas anatômicas.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- SIMULADOS -->
+
+                <a
+                    href="#"
+                    class="resource"
+                    style="--resource-image: url('imagens/reprodutor-simulado.jpg');"
+                >
+
+                    <div class="resource-icon">
+                        🎯
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Simulados
+                        </h3>
+
+                        <p>
+                            Teste sua preparação.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             SISTEMA URINÁRIO
+        ================================= -->
+
+        <section class="system">
+
+            <div class="system-header">
+
+                <div class="system-title">
+
+                    <small>
+                        Conteúdo II
+                    </small>
+
+                    <h2>
+                        💧 Sistema Urinário
+                    </h2>
+
+                    <p>
+                        Materiais e ferramentas para o estudo
+                        do sistema urinário.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="resources">
+
+
+                <!-- MATERIAIS -->
+
+                <a
+                    href="#"
+                    class="resource"
+                    style="--resource-image: url('imagens/urinario-materiais.jpg');"
+                >
+
+                    <div class="resource-icon">
+                        📁
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Materiais
+                        </h3>
+
+                        <p>
+                            Arquivos da disciplina.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- RESUMOS -->
+
+                <a
+                    href="#"
+                    class="resource"
+                    style="--resource-image: url('imagens/urinario-resumos.jpg');"
+                >
+
+                    <div class="resource-icon">
+                        📖
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Resumos
+                        </h3>
+
+                        <p>
+                            Material de revisão.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- QUESTÕES -->
+
+                <a
+                    href="#"
+                    class="resource"
+                    style="--resource-image: url('imagens/urinario-questoes.jpg');"
+                >
+
+                    <div class="resource-icon">
+                        📝
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Questões
+                        </h3>
+
+                        <p>
+                            Pratique seus conhecimentos.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- ATLAS -->
+
+                <a
+                    href="#"
+                    class="resource"
+                    style="--resource-image: url('imagens/urinario-atlas.jpg');"
+                >
+
+                    <div class="resource-icon">
+                        🦴
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Atlas
+                        </h3>
+
+                        <p>
+                            Consulte estruturas anatômicas.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- SIMULADOS -->
+
+                <a
+                    href="#"
+                    class="resource"
+                    style="--resource-image: url('imagens/urinario-simulado.jpg');"
+                >
+
+                    <div class="resource-icon">
+                        🎯
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Simulados
+                        </h3>
+
+                        <p>
+                            Teste sua preparação.
+                        </p>
+
+                        <span class="status">
+                            Em breve
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================
+         VOLTAR
+    ================================= -->
+
+    <div class="back">
+
+        <a href="index.html">
+
+            ← Voltar para as unidades
+
+        </a>
+
+    </div>
+
+
+    <!-- =================================
+         RODAPÉ
+    ================================= -->
+
+    <footer>
+
+        <div>
+            Anatomia Descritiva Animal II · Portal da Monitoria
+        </div>
+
+        <div>
+            Desenvolvido por <strong>Gabriel Mendes</strong>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
