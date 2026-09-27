@@ -7,8 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Simulados | Unidade II | ANATOMIA DESCRITIVA ANIMAL II</title>
-
+    <title>Simulados - Sistema Digestório | Anatomia Descritiva Animal II</title>
 
     <style>
 
@@ -144,7 +143,7 @@
 
 
         /* =================================
-           HERO
+           APRESENTAÇÃO
         ================================= */
 
         .hero {
@@ -155,9 +154,15 @@
 
             padding: 120px 6% 90px;
 
-            overflow: hidden;
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
 
             text-align: center;
+
+            overflow: hidden;
 
         }
 
@@ -168,18 +173,20 @@
 
             position: absolute;
 
-            width: 520px;
+            width: 600px;
 
-            height: 420px;
+            height: 450px;
 
-            right: -160px;
+            left: 50%;
 
             top: 0;
+
+            transform: translateX(-50%);
 
             background:
                 radial-gradient(
                     circle,
-                    rgba(21, 148, 237, 0.22),
+                    rgba(21, 148, 237, 0.20),
                     rgba(21, 148, 237, 0) 70%
                 );
 
@@ -194,9 +201,7 @@
 
             z-index: 1;
 
-            max-width: 850px;
-
-            margin: auto;
+            max-width: 800px;
 
         }
 
@@ -220,26 +225,39 @@
 
         .hero h1 {
 
-            font-size: clamp(38px, 5vw, 62px);
+            font-size: clamp(40px, 6vw, 64px);
 
             line-height: 1.05;
 
             letter-spacing: -1.5px;
 
-            margin-bottom: 22px;
+            margin-bottom: 18px;
 
         }
 
 
-        .hero-subtitle {
+        .hero h2 {
 
-            color: #b7c2ce;
+            font-size: 22px;
 
-            font-size: 16px;
+            font-weight: 400;
+
+            color: var(--muted);
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .hero-description {
 
             max-width: 650px;
 
             margin: auto;
+
+            color: #9fb0c0;
+
+            font-size: 14px;
 
         }
 
@@ -248,18 +266,18 @@
            CONTEÚDO
         ================================= */
 
-        .content {
+        .simulados-section {
 
             padding: 55px 6% 70px;
 
         }
 
 
-        .content-header {
-
-            margin-bottom: 40px;
+        .section-header {
 
             text-align: center;
+
+            margin-bottom: 40px;
 
         }
 
@@ -276,25 +294,33 @@
 
             text-transform: uppercase;
 
+            margin-bottom: 12px;
+
+        }
+
+
+        .section-header h2 {
+
+            font-size: 24px;
+
         }
 
 
         /* =================================
-           SIMULADOS
+           CARDS DOS SIMULADOS
         ================================= */
 
         .simulados {
 
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 18px;
-
-            max-width: 1100px;
+            max-width: 1050px;
 
             margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
 
         }
 
@@ -303,7 +329,7 @@
 
             position: relative;
 
-            min-height: 280px;
+            min-height: 300px;
 
             background: var(--surface);
 
@@ -320,6 +346,8 @@
             justify-content: space-between;
 
             overflow: hidden;
+
+            text-align: center;
 
             transition:
                 transform 0.25s ease,
@@ -361,44 +389,31 @@
         }
 
 
-        .simulado-label {
-
-            color: var(--blue-light);
-
-            font-size: 9px;
-
-            font-weight: 700;
-
-            letter-spacing: 2.5px;
-
-            text-transform: uppercase;
-
-        }
-
-
         .simulado-content {
 
-            margin-top: 55px;
+            position: relative;
+
+            z-index: 1;
+
+            margin-top: 45px;
 
         }
 
 
         .simulado-icon {
 
-            font-size: 30px;
+            font-size: 38px;
 
-            margin-bottom: 14px;
+            margin-bottom: 15px;
 
         }
 
 
-        .simulado h2 {
+        .simulado h3 {
 
             font-size: 22px;
 
-            line-height: 1.15;
-
-            margin-bottom: 8px;
+            margin-bottom: 12px;
 
         }
 
@@ -407,33 +422,16 @@
 
             color: var(--muted);
 
-            font-size: 12px;
+            font-size: 13px;
 
-            line-height: 1.4;
+            max-width: 260px;
 
-        }
-
-
-        .status {
-
-            display: inline-block;
-
-            margin-top: 18px;
-
-            color: #8794a2;
-
-            font-size: 9px;
-
-            text-transform: uppercase;
-
-            letter-spacing: 1.5px;
-
-            font-weight: 700;
+            margin: auto;
 
         }
 
 
-        .button {
+        .simulado-button {
 
             display: inline-flex;
 
@@ -466,9 +464,26 @@
         }
 
 
-        .button:hover {
+        .simulado-button:hover {
 
             background: var(--blue-light);
+
+        }
+
+
+        .status {
+
+            margin-top: 12px;
+
+            color: #8794a2;
+
+            font-size: 10px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            font-weight: 700;
 
         }
 
@@ -479,24 +494,22 @@
 
         .back {
 
-            padding: 0 6% 70px;
+            text-align: center;
+
+            padding: 10px 0 70px;
 
         }
 
 
         .back a {
 
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 8px;
-
-            color: var(--muted);
+            color: var(--blue-light);
 
             text-decoration: none;
 
-            font-size: 13px;
+            font-size: 14px;
+
+            font-weight: 700;
 
             transition: 0.2s;
 
@@ -568,25 +581,28 @@
             }
 
 
+            .brand span {
+
+                font-size: 13px;
+
+            }
+
+
             .hero {
 
-                padding:
-                    95px 5%
-                    75px;
-
-                min-height: auto;
+                padding: 95px 5% 75px;
 
             }
 
 
             .hero h1 {
 
-                font-size: 40px;
+                font-size: 42px;
 
             }
 
 
-            .content {
+            .simulados-section {
 
                 padding-left: 5%;
 
@@ -600,15 +616,6 @@
                 flex-direction: column;
 
                 align-items: flex-start;
-
-            }
-
-
-            .back {
-
-                padding-left: 5%;
-
-                padding-right: 5%;
 
             }
 
@@ -628,10 +635,7 @@
 
     <header>
 
-        <a
-            href="index.html"
-            class="brand"
-        >
+        <a href="index.html" class="brand">
 
             <img
                 src="imagens/logo_raposa_transparente_canva.png"
@@ -646,10 +650,10 @@
 
 
         <a
-            href="unidade-2.html"
+            href="unidade-1.html"
             class="nav-link"
         >
-            ← Unidade II
+            ← Unidade I
         </a>
 
     </header>
@@ -667,7 +671,7 @@
             <div class="hero-content">
 
                 <div class="eyebrow">
-                    Unidade II · Sistema Reprodutor
+                    Unidade I · Sistema Digestório
                 </div>
 
 
@@ -684,7 +688,7 @@
                 <div class="hero-description">
 
                     Teste seus conhecimentos e revise
-                    os conteúdos estudados do sistema Reprodutor.
+                    os conteúdos estudados do sistema digestório.
 
                 </div>
 
@@ -740,7 +744,7 @@
 
                         <p>
                             Teste seus conhecimentos
-                            sobre o sistema Reprodutor.
+                            sobre o sistema digestório.
                         </p>
 
                     </div>
@@ -789,7 +793,7 @@
 
                         <p>
                             Teste seus conhecimentos
-                            sobre o sistema Reprodutor.
+                            sobre o sistema digestório.
                         </p>
 
                     </div>
@@ -838,7 +842,7 @@
 
                         <p>
                             Teste seus conhecimentos
-                            sobre o sistema Reprodutor.
+                            sobre o sistema digestório.
                         </p>
 
                     </div>
@@ -875,9 +879,9 @@
 
         <div class="back">
 
-            <a href="unidade-2.html">
+            <a href="unidade-1.html">
 
-                ← Voltar para a Unidade II
+                ← Voltar para a Unidade I
 
             </a>
 
